@@ -1,6 +1,6 @@
 {
-  "name": "git-branch-selector",
+  "name": "git-branch",
   "version": "0.1.0",
   "main": "./lib/main",
-  "description": "Switch to the selected git branch for the current editor with `ctrl-shift-B`.",
+  "description": "Switch to the selected git branch for the current editor with `ctrl-shift-B`."
 }
