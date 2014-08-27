@@ -1,0 +1,8 @@
+'.platform-darwin .editor':
+  'ctrl-B': 'git-branch-selector:show'
+
+'.platform-win32 .editor':
+  'ctrl-B': 'git-branch-selector:show'
+
+'.platform-linux .editor':
+  'ctrl-B': 'git-branch-selector:show'

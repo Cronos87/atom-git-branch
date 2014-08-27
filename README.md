@@ -1,0 +1,1 @@
+# Atom Git Branch Selector

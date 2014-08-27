@@ -1,0 +1,10 @@
+'menu': [
+  'label': 'Packages'
+  'submenu': [
+    'label': 'Git Branch'
+    'submenu': [
+      'label': 'Select Git Branch'
+      'command': 'git-branch-selector:show'
+    ]
+  ]
+]
