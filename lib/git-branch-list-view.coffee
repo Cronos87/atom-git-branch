@@ -31,7 +31,7 @@ class GitBranchListView extends SelectListView
   confirmed: (branch) ->
     @cancel()
     if git.checkoutReference(branch.name)
-      git?.refreshStatus()
+      git.refreshStatus()
 
   attach: ->
     @storeFocusedElement()
