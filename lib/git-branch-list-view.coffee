@@ -1,5 +1,7 @@
 {SelectListView} = require 'atom'
 
+git = atom.project.getRepo()
+
 # View to display a list of grammars to apply to the current editor.
 module.exports =
 class GitBranchListView extends SelectListView
@@ -28,7 +30,7 @@ class GitBranchListView extends SelectListView
 
   confirmed: (branch) ->
     @cancel()
-    alert "ok"
+    git.checkoutReference(branch.name)
 
   attach: ->
     @storeFocusedElement()
@@ -36,14 +38,14 @@ class GitBranchListView extends SelectListView
     @focusFilterEditor()
 
   getGitBranch: ->
-    branchs = {name: "admin"}
+    branch = {name: git.getShortHead()}
 
-    branchs
+    branch
 
   getGitBranchs: ->
-    branchs = @test()
+    branchs = []
+
+    for key, branch of git.getReferences().heads
+      branchs.push {name: branch.replace "refs/heads/", ""}
 
     branchs
-
-  test: ->
-    branchs = [{name: "master"}, {name: "admin"}]
